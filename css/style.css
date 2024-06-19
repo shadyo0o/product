@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.product{
+    background-image: url(../forest-2560x1440-mountains-violet-birds-art-hd-16431.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+}.form-floating label::after{
+    background-color:transparent;
+    padding: 0;
+    border: 0;
+}
+
+.form-floating input:focus{
+    box-shadow: 2px 2px 3px 4px rgb(184, 133, 233);
+    /* scale: 1.1; */
+}
+
+.container{
+    backdrop-filter: blur(150px);
+}
+
+.btn::after{
+    content: "";
+    border-bottom: 1px rgb(242, 227, 247) dotted;
+    position: absolute;
+    width: 1000px;
+    bottom: -20px;
+    left: 0;
+}

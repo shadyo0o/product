@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="product ">
+    <div class=" w-75 pt-1 mx-auto">
+        <h1 class="py-3 text-center">{ Product Reviews }</h1>
+        <div class="form-floating mb-3">
+            <input oninput="validate(this)" type="text" class="form-control" id="productName" placeholder="product Name">
+            <label class="" for="productName">product Name</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input oninput="validate(this)" type="number" class="form-control" id="productPrice" placeholder="product Price">
+            <label for="productPrice">product Price</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input oninput="validate(this)" list="categories" type="text" class="form-control" id="productCategory" placeholder="product Category">
+            <label for="productCategory">product Category</label>
+            <datalist id="categories">
+                <option value="Tv" />
+                <option value="Mobile" />
+                <option value="Laptop" />
+                <option value="Screens" />
+                <option value="Others" />
+            </datalist>
+          </div>
+
+          <div class="form-floating mb-3">
+            <textarea oninput="validate(this)" class="form-control" id="productDesc" placeholder="product Desc"></textarea>
+            <label for="productDesc">product Desc</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input multiple type="file" class="form-control  text-dark" id="productImage" placeholder="Choose image">
+            <label for="productImage">product image</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input oninput="searchProduct()" type="search" class="form-control" id="search" placeholder="search">
+            <label class="" for="search">Search ... :</label>
+          </div>
+
+          <button id="add" onclick="addProduct()" class="btn btn-primary position-relative">Add Product</button>
+          <button id="update" onclick="Update()" class="btn btn-primary position-relative d-none">Update Product</button>
+         
+
+</div>
+</div>
+<div class="productShow mt-3">
+  <div class="container">
+    <div id="rowData" class="row gy-3">
+            
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
